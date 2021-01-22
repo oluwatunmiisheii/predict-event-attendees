@@ -4,7 +4,7 @@ import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 const apiClient = Axios.create({
-  baseURL: process.env.NEXT_PUBLIC_APP_API_BASE_URL,
+  baseURL: process.env.VUE_APP_NATIONALITY_API,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
