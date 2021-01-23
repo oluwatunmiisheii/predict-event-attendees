@@ -10,12 +10,15 @@ export default {
       default: 'trix-button__primary',
       required: false,
       validator: function(value) {
-        // The value must match one of these strings
-        return ['trix-button__primary'].indexOf(value) !== -1
+        return ['tix-button__primary'].indexOf(value) !== -1
       }
     }
   },
+  
   setup(props, context) {
+    /**
+     * function to emit a click event when the button component is clicked 
+     */
     function btnClicked() {
       context.emit('btnClicked')
     }
@@ -24,5 +27,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  @import "@/assets/scss/components/_button.scss"
+  @import "@/assets/scss/components/_button.scss";
 </style>

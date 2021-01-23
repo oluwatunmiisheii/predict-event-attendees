@@ -16,12 +16,15 @@
 
  // font-size
  @each $fontsize in $fontsizes {
-   .fs-#{$fontsize} {
+   .tix-fs-#{$fontsize} {
      font-size: #{$fontsize}px !important;
    }
 
  }
 
+
+
+ // reset fonts
  h1,
  h2,
  h3,
