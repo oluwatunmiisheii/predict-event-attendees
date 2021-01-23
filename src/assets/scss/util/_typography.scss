@@ -1,0 +1,35 @@
+ @font-face {
+   font-family: Segoe UI;
+   font-style: normal;
+   font-weight: 500;
+   src: url('/assets/fonts/Segoe-UI.ttf') format("ttf")
+ }
+
+ @font-face {
+   font-family: Segoe UI Bold;
+   font-style: normal;
+   font-weight: 700;
+   src: url('/assets/fonts/Segoe-UI-Bold.ttf') format("ttf")
+ }
+
+ $fontsizes: (11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30);
+
+ // font-size
+ @each $fontsize in $fontsizes {
+   .fs-#{$fontsize} {
+     font-size: #{$fontsize}px !important;
+   }
+
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+   margin: 0;
+   padding: 0;
+   -webkit-font-smoothing: antialiased !important;
+ }
