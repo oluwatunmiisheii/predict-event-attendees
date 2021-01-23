@@ -1,0 +1,27 @@
+.trix-button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  display: inline-flex;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  text-transform: none;
+  transition: .2s ease all;
+  outline: none;
+  border: 1px solid $primary;
+
+  &__primary {
+    background: $primary;
+    color: $white;
+    border-color: $primary;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: lighten($color: $primary, $amount: 20);
+  }
+}
