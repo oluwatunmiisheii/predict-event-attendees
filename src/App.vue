@@ -18,7 +18,7 @@ export default {
   
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   @import "@/assets/scss/util/_typography.scss";
   @import "@/assets/scss/_global.scss";
 </style>

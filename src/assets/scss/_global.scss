@@ -5,4 +5,7 @@ html {
   margin: 0;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased !important;
+  background-color: rgba(243, 244, 246, 1);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
