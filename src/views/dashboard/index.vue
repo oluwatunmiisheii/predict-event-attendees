@@ -74,4 +74,9 @@ export default {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
   }
+  @media (max-width: 600) {
+    .dashboard-analytics {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 </style>

@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="cta">
-      <span class="tix-fs__14 text-primary">View details</span>
+      <router-link :to="{name: 'Events'}" class="tix-fs__14 text-primary">View details</router-link>
     </div>
   </div>
 </template>
@@ -89,6 +89,9 @@ export default {
       align-items: center;
       min-height: 1px;
       padding: 10px 15px;
+      a {
+        text-decoration: none;
+      }
     }
   }
 </style>
