@@ -1,0 +1,76 @@
+$widths: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$spaceamounts: (1, 2, 3, 4, 5);
+$spacer: (0.25rem, 0.5rem, 1rem, 1.5rem, 3rem);
+
+// font-size
+@each $width in $widths {
+  .w-#{$width} {
+    width: #{$width + '%'} !important;
+  }
+
+}
+
+
+
+// Margin and Padding
+@each $space in $spaceamounts {
+  $i: index($spaceamounts, $space);
+
+  // margin
+  .tix-m__#{$i} {
+    margin: nth($spacer, $i) !important;
+  }
+
+  .tix-my__#{$space} {
+    margin: nth($spacer, $i) 0 !important;
+  }
+
+  .tix-mx__#{$space} {
+    margin: 0 nth($spacer, $i) !important;
+  }
+
+  .tix-ml__#{$space} {
+    margin-left: nth($spacer, $i) !important;
+  }
+
+  .tix-mr__#{$space} {
+    margin-right: nth($spacer, $i) !important;
+  }
+
+  .tix-mt__#{$space} {
+    margin-top: nth($spacer, $i) !important;
+  }
+
+  .tix-mb__#{$space} {
+    margin-bottom: nth($spacer, $i) !important;
+  }
+
+  // padding
+  .tix-p__#{$space} {
+    padding: nth($spacer, $i) !important;
+  }
+
+  .tix-py__#{$space} {
+    padding: nth($spacer, $i) 0 !important;
+  }
+
+  .tix-px__#{$space} {
+    padding: 0 nth($spacer, $i) !important;
+  }
+
+  .tix-pl__#{$space} {
+    padding-left: nth($spacer, $i) !important;
+  }
+
+  .tix-pr__#{$space} {
+    padding-right: nth($spacer, $i) !important;
+  }
+
+  .tix-pt__#{$space} {
+    padding-top: nth($spacer, $i) !important;
+  }
+
+  .tix-pb__#{$space} {
+    padding-bottom: nth($spacer, $i) !important;
+  }
+}

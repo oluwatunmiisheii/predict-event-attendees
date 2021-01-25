@@ -1,30 +1,27 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <app-header />
+  <div class="tix-mb__5 tix-pb__5">
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import AppHeader from "./components/header"
+export default {
+  components: {
+    AppHeader
+  },
+  setup() {
+    function btnClicked() {
+      console.log('button clicked')
+    }
+    return {btnClicked}
+  }
+  
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+</script>
+<style lang="scss">
+  @import "@/assets/scss/util/_typography.scss";
+  @import "@/assets/scss/util/_spacing.scss";
+  @import "@/assets/scss/_global.scss";
 </style>
