@@ -4,7 +4,7 @@ import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 const apiClient = Axios.create({
-  baseURL: process.env.VUE_APP_NATIONALITY_API,
+  baseURL: process.env.VUE_APP_NATIONALITY_API || "https://api.nationalize.io",
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
