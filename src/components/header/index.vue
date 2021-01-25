@@ -4,7 +4,7 @@
       <nav class="tix-nav__wrapper">
         <div class="nav-item__left">
           <div class="trix-logo">
-            <router-link :to="{name: 'Home'}">
+            <router-link :to="{name: 'Dashboard'}">
               <header-logo />
             </router-link>
           </div>
@@ -19,7 +19,7 @@
             tabindex="0"
           > 
             <div class="tix-dropdown__toggle">
-              <span class="user-name tix-pr__2 tix-fs-15">Welcome! Oluwatunmise</span>
+              <span class="user-name tix-pr__2 tix-fs__15">Welcome! Oluwatunmise</span>
               <span class="user-initials">OA</span>
             </div>
             <ul class="tix-dropdown__content" id="dropdown-menu">
@@ -68,7 +68,7 @@ export default {
     LogoutIcon
   },
   setup() {
-    const location = inject('hello world');
+    const location = inject('location');
     onMounted(() => console.log('component mounted!', location))
     return {location}
   }
