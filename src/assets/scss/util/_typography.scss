@@ -16,7 +16,7 @@
 
  // font-size
  @each $fontsize in $fontsizes {
-   .tix-fs-#{$fontsize} {
+   .tix-fs__#{$fontsize} {
      font-size: #{$fontsize}px !important;
    }
 

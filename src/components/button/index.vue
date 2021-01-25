@@ -1,5 +1,5 @@
 <template>
-  <button class="trix-button" :class="btnClass" @click="btnClicked">Hello</button>
+  <button class="tix-button" :class="btnClass" @click="btnClicked">{{btnText}}</button>
 </template>
 
 <script>
@@ -7,7 +7,15 @@ export default {
   props: {
     btnClass: {
       type: String,
-      default: 'trix-button__primary',
+      default: 'tix-button__primary',
+      required: false,
+      validator: function(value) {
+        return ['tix-button__primary'].indexOf(value) !== -1
+      }
+    },
+    btnText: {
+      type: String,
+      default: '',
       required: false,
       validator: function(value) {
         return ['tix-button__primary'].indexOf(value) !== -1

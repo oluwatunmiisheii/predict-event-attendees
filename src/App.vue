@@ -1,15 +1,14 @@
 <template>
   <app-header />
-  <app-button @btnClicked="btnClicked()" />
-  <router-view/>
+  <div class="tix-mb__5 tix-pb__5">
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import AppButton from "./components/button"
 import AppHeader from "./components/header"
 export default {
   components: {
-    AppButton,
     AppHeader
   },
   setup() {
