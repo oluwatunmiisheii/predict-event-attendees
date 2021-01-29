@@ -16,10 +16,7 @@ export default {
     btnText: {
       type: String,
       default: '',
-      required: false,
-      validator: function(value) {
-        return ['tix-button__primary'].indexOf(value) !== -1
-      }
+      required: false
     }
   },
   

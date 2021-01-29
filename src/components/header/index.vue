@@ -39,7 +39,6 @@
               </li>
               <li class="tix-dropdown__item">
                 <a href="#"><logout-icon />Log Out</a>
-                <span>{{location}}</span>
               </li>
             </ul>
           </div>
@@ -50,8 +49,6 @@
 </template>
 
 <script>
-import { onMounted, inject } from 'vue'
-
 import HeaderLogo from "./headerLogo"
 import ProfileIcon from "../vectors/Profile"
 import EventIcon from "../vectors/Event"
@@ -67,11 +64,6 @@ export default {
     HelpIcon,
     LogoutIcon
   },
-  setup() {
-    const location = inject('location');
-    onMounted(() => console.log('component mounted!', location))
-    return {location}
-  }
 }
 </script>
 
