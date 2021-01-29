@@ -21,7 +21,7 @@
 
 <script>
 import apiClient from '@/services/api'
-import {ref} from 'vue'
+import {ref, onMounted} from 'vue'
 export default {
   props: {
     attendees: {
@@ -30,7 +30,7 @@ export default {
       required: true
     }
   },
-  setup(props) {
+  setup(props, {store}) {
     let userNationality = ref("")
     async function getUserNationality(name, userId) {
      const userNationalityResponse = await apiClient.get(`?name=${name}`)
@@ -39,6 +39,7 @@ export default {
       attendeeInfo.nationality =  userNationality.value
       console.log(attendeeInfo, userNationality)
     }
+     onMounted(() => { console.log(store)});
     return {userNationality, getUserNationality}
   }
 }
